@@ -1,28 +1,34 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
-import FastImage from 'react-native-fast-image';
+import {
+  StyleSheet,
+  View,
+  Text,
+  Dimensions,
+  ImageBackground,
+} from 'react-native';
+
+const windowWidth = Dimensions.get('window').width;
 
 //#region Props
-interface Props {
-  Title: string;
-  ImageUri: string;
+interface CategoryHeaderComponentProps {
+  title: string | undefined;
+  imageUri: string | undefined;
 }
 //#endregion
 
 //#region UI
-const CategoryHeaderComponent: React.FC<Props> = ({Title, ImageUri}) => {
+const CategoryHeaderComponent: React.FC<CategoryHeaderComponentProps> = ({
+  title,
+  imageUri,
+}) => {
   return (
-    <View style={styles.container}>
-      <FastImage
-        style={{width: 200, height: 200}}
-        source={{
-          uri: ImageUri,
-          headers: {Authorization: 'someAuthToken'},
-          priority: FastImage.priority.normal,
-        }}
-        resizeMode={FastImage.resizeMode.contain}
-      />
-      <Text>{Title}</Text>
+    <View style={[styles.container]}>
+      <ImageBackground
+        source={{uri: imageUri}}
+        resizeMode="cover"
+        style={styles.image}>
+        <Text style={styles.title}>{title}</Text>
+      </ImageBackground>
     </View>
   );
 };
@@ -33,9 +39,23 @@ export default CategoryHeaderComponent;
 //#region Styling
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    padding: 24,
+    width: windowWidth,
+    height: 200,
+    padding: 12,
     backgroundColor: '#eaeaea',
+  },
+  image: {
+    flex: 1,
+    borderRadius: 13,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title: {
+    textAlign: 'center',
+    color: '#FFFFFF',
+    fontSize: 22,
+    fontWeight: '800',
   },
 });
 //#endregion

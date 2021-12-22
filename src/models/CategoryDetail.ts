@@ -1,12 +1,12 @@
 export type Category = {
-  id?: String;
-  name?: String;
-  imageUri: String;
+  id: string;
+  name: string;
+  imageUri: string;
   subCategories: Array<SubCategory>;
 };
 
 export type SubCategory = {
-  id?: String;
-  name?: String;
+  id: string;
+  name: string;
   productIds: Array<Number>;
 };

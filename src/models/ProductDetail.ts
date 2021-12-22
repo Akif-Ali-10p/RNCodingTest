@@ -1,11 +1,11 @@
 export type Product = {
-  id?: Number;
-  name?: String;
-  brand?: Brand;
-  price?: Number;
+  id: number;
+  name: string;
+  brand: Brand;
+  price: number;
 };
 
 export type Brand = {
-  id?: String;
-  name?: String;
+  id: string;
+  name: string;
 };
