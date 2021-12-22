@@ -1,0 +1,44 @@
+[
+    {
+      "subCategoryId": "shampo--o",
+      "products": [
+        {
+          "id": 111,
+          "name": "Resurrection Shampoo",
+          "brand": {
+            "name": "Aesop"
+          },
+          "Price": 39.99
+        },
+        {
+          "id": 112,
+          "name": "Marvis Shampoo",
+          "brand": {
+            "name": "Marvis"
+          },
+          "Price": 9.95
+        }
+      ]
+    },
+    {
+      "subCategoryId": "hand-wash",
+      "products": [
+        {
+          "id": 221,
+          "name": "Resurrection Handwash",
+          "brand": {
+            "name": "Aesop"
+          },
+          "Price": 39.99
+        },
+        {
+          "id": 222,
+          "name": "Marvis Whitening mint tooth paste",
+          "brand": {
+            "name": "Marvis"
+          },
+          "Price": 9.95
+        }
+      ]
+    }
+  ]

@@ -1,0 +1,25 @@
+[
+    {
+      "id": "personal-care",
+      "name": "Personal Care",
+      "imageUri": "https://unsplash.it/400/400?image=1",
+      "subCategories": [
+        {
+          "name": "Shampoo",
+          "id": "shampo--o",
+          "productIds": [
+            111,
+            112
+          ]
+        },
+        {
+          "name": "Handwash",
+          "id": "hand-wash",
+          "productIds": [
+            221,
+            222
+          ]
+        }
+      ]
+    }
+  ]
